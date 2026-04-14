@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio personal de Daniel Ríos Zea, estudiante de Desarrollo de Aplicaciones Web (DAW). HTML, CSS, Java y más.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Daniel Ríos Zea | Web Developer</title>
+</head>
+
+<body>
+
+    <!-- Navbar fija -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__contenedor">
+            <a href="#inicio" class="navbar__logo">DRZ<span class="navbar__logo-punto">.</span></a>
+            <ul class="navbar__lista">
+                <li><a href="#inicio" class="navbar__enlace">Inicio</a></li>
+                <li><a href="#sobre-mi" class="navbar__enlace">Sobre mí</a></li>
+                <li><a href="#tecnologias" class="navbar__enlace">Tecnologías</a></li>
+                <li><a href="#proyectos" class="navbar__enlace">Proyectos</a></li>
+                <li><a href="#contacto" class="navbar__enlace">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="inicio">
+        <div class="hero__contenido">
+            <span class="hero__etiqueta">👋 ¡Hola! Soy</span>
+            <h1 class="hero__nombre">Daniel Ríos Zea</h1>
+            <p class="hero__titulo">Web Developer</p>
+            <p class="hero__descripcion">
+                Estudiante de Desarrollo de Aplicaciones Web (DAW) enfocado en el desarrollo
+                backend con <strong>Python y Java</strong>, apasionado por la integración de
+                <strong>Inteligencia Artificial</strong> y el diseño de interfaces modernas.
+            </p>
+            <a href="#proyectos" class="hero__boton">Ver mis proyectos</a>
+        </div>
+    </header>
+
+    <!-- Sobre mí -->
+    <section class="seccion sobre-mi" id="sobre-mi">
+        <h2 class="seccion__titulo">Sobre mí</h2>
+
+        <div class="sobre-mi__contenido">
+            <div class="sobre-mi__imagen-contenedor">
+                <img src="assets/perfil.png" alt="Foto de Daniel Ríos Zea" class="sobre-mi__imagen">
+            </div>
+
+            <div class="sobre-mi__texto">
+                <p>
+                    Soy Daniel, estudiante de primer año de <strong>DAW</strong> en busca de una
+                    carrera en el mundo del desarrollo web. Me interesa tanto el frontend como el
+                    backend, y disfruto creando proyectos que resuelvan problemas reales.
+                </p>
+                <p>
+                    Actualmente estoy especializado en <strong>Python, Java y desarrollo web</strong>,
+                    enfocándome en la creación de aplicaciones inteligentes mediante la integración
+                    de <strong>Inteligencia Artificial</strong>. Domino el uso de <strong>Git</strong> para el
+                    control de versiones y disfruto resolviendo problemas complejos de forma eficiente.
+                </p>
+                <p>
+                    Mi objetivo es seguir formándome, contribuir a proyectos interesantes y, en un
+                    futuro, especializarme en desarrollo full-stack.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías - grid de tarjetas -->
+    <section class="seccion tecnologias" id="tecnologias">
+        <h2 class="seccion__titulo">Tecnologías</h2>
+        <p class="seccion__subtitulo">Herramientas y lenguajes que manejo</p>
+
+        <div class="tecnologias__grid">
+            <article class="tarjeta-tech">
+                <div class="tarjeta-tech__icono">
+                    <img src="assets/java.png" alt="Logo de Java" class="tarjeta-tech__img tarjeta-tech__img--java">
+                </div>
+                <h3 class="tarjeta-tech__nombre">Java</h3>
+                <p class="tarjeta-tech__desc">Programación orientada a objetos</p>
+            </article>
+
+            <article class="tarjeta-tech">
+                <div class="tarjeta-tech__icono">
+                    <img src="assets/python.png" alt="Logo de Python" class="tarjeta-tech__img">
+                </div>
+                <h3 class="tarjeta-tech__nombre">Python</h3>
+                <p class="tarjeta-tech__desc">Automatización y Ciencia de Datos</p>
+            </article>
+
+            <article class="tarjeta-tech">
+                <div class="tarjeta-tech__icono">
+                    <img src="assets/html.png" alt="Logo de HTML5" class="tarjeta-tech__img">
+                </div>
+                <h3 class="tarjeta-tech__nombre">HTML5</h3>
+                <p class="tarjeta-tech__desc">Estructura y semántica web</p>
+            </article>
+
+            <article class="tarjeta-tech">
+                <div class="tarjeta-tech__icono">
+                    <img src="assets/css.png" alt="Logo de CSS3" class="tarjeta-tech__img">
+                </div>
+                <h3 class="tarjeta-tech__nombre">CSS3</h3>
+                <p class="tarjeta-tech__desc">Diseño y maquetación</p>
+            </article>
+
+            <article class="tarjeta-tech">
+                <div class="tarjeta-tech__icono">
+                    <img src="assets/git.png" alt="Logo de Git" class="tarjeta-tech__img">
+                </div>
+                <h3 class="tarjeta-tech__nombre">Git</h3>
+                <p class="tarjeta-tech__desc">Control de versiones</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Proyectos - grid con proyecto destacado -->
+    <section class="seccion proyectos" id="proyectos">
+        <h2 class="seccion__titulo">Proyectos</h2>
+        <p class="seccion__subtitulo">Algunos trabajos en los que he participado</p>
+
+        <div class="proyectos__grid">
+
+            <!-- Proyecto destacado: ELDAP -->
+            <article class="tarjeta-proyecto tarjeta-proyecto--destacado">
+                <div class="tarjeta-proyecto__imagen-contenedor">
+                    <img src="assets/eldap.jpg" alt="Captura del videojuego ELDAP" class="tarjeta-proyecto__imagen">
+                    <span class="tarjeta-proyecto__badge">Destacado</span>
+                </div>
+                <div class="tarjeta-proyecto__info">
+                    <h3 class="tarjeta-proyecto__titulo">ELDAP</h3>
+                    <p class="tarjeta-proyecto__descripcion">
+                        Videojuego desarrollado en equipo como proyecto de clase.
+                        Ganador del concurso interno del aula. Programado en Java con
+                        mecánicas de exploración y combate por turnos.
+                    </p>
+                    <div class="tarjeta-proyecto__tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Trabajo en equipo</span>
+                        <span class="tag">Ganador</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Ge-mini Project -->
+            <article class="tarjeta-proyecto">
+                <div class="tarjeta-proyecto__imagen-contenedor">
+                    <img src="assets/ge-mini.png" alt="Captura del proyecto Ge-mini" class="tarjeta-proyecto__imagen">
+                </div>
+                <div class="tarjeta-proyecto__info">
+                    <h3 class="tarjeta-proyecto__titulo">Ge-mini</h3>
+                    <p class="tarjeta-proyecto__descripcion">
+                        Proyecto personal de una mini IA, un clon de ChatGPT personal que usa
+                        las APIs de Gemini y Groq para procesamiento de lenguaje natural.
+                    </p>
+                    <div class="tarjeta-proyecto__tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Gemini SDK</span>
+                        <span class="tag">FastAPI</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Portfolio -->
+            <article class="tarjeta-proyecto">
+                <div class="tarjeta-proyecto__imagen-contenedor">
+                    <img src="assets/proyecto-portfolio.png" alt="Captura del portfolio web"
+                        class="tarjeta-proyecto__imagen">
+                </div>
+                <div class="tarjeta-proyecto__info">
+                    <h3 class="tarjeta-proyecto__titulo">Portfolio Personal</h3>
+                    <p class="tarjeta-proyecto__descripcion">
+                        Esta misma web que estás viendo. Diseñada con HTML5 y CSS3 puro,
+                        usando Flexbox y CSS Grid para la maquetación.
+                    </p>
+                    <div class="tarjeta-proyecto__tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="seccion contacto" id="contacto">
+        <h2 class="seccion__titulo">Contacto</h2>
+        <p class="seccion__subtitulo">¿Quieres ponerte en contacto conmigo?</p>
+
+        <div class="contacto__contenedor">
+            <a href="mailto:drioszea@gmail.com" class="contacto__tarjeta">
+                <span class="contacto__icono">✉️</span>
+                <h3 class="contacto__medio">Email</h3>
+                <p class="contacto__dato">drioszea@gmail.com</p>
+            </a>
+
+            <a href="https://github.com/danirz10" target="_blank" rel="noopener noreferrer" class="contacto__tarjeta">
+                <span class="contacto__icono">💻</span>
+                <h3 class="contacto__medio">GitHub</h3>
+                <p class="contacto__dato">github.com/danirz10</p>
+            </a>
+
+            <a href="https://es.linkedin.com/in/danirz/" target="_blank" rel="noopener noreferrer"
+                class="contacto__tarjeta">
+                <span class="contacto__icono">🔗</span>
+                <h3 class="contacto__medio">LinkedIn</h3>
+                <p class="contacto__dato">linkedin.com/in/danirz/</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__texto">
+            &copy; 2026 Daniel Ríos Zea · Proyecto realizado para el módulo de Lenguaje de Marcas (DAW)
+        </p>
+    </footer>
+
+</body>
+
+</html>
