@@ -164,7 +164,15 @@ ul { list-style: none; }
     line-height: 1.8;
 }
 
-/* boton CTA */
+/* botones CTA */
+.hero__botones {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
 .hero__boton {
     display: inline-block;
     padding: 14px 32px;
@@ -177,6 +185,18 @@ ul { list-style: none; }
     transition: var(--transicion);
     box-shadow: 0 4px 15px rgba(224, 122, 95, 0.3);
 }
+.hero__boton--secundario {
+    background-color: transparent;
+    border: 2px solid rgba(244, 241, 222, 0.5);
+    box-shadow: none;
+    padding: 12px 30px;
+}
+.hero__boton.hero__boton--secundario:hover {
+    background-color: rgba(244, 241, 222, 0.1);
+    border-color: var(--color-fondo);
+    box-shadow: none;
+}
+
 .hero__boton:hover {
     background-color: var(--color-primario-oscuro);
     transform: translateY(-2px);
@@ -242,17 +262,69 @@ ul { list-style: none; }
 .sobre-mi__texto strong { color: var(--color-texto); }
 
 
+/* Experiencia */
+.tarjeta-experiencia {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--color-fondo-claro);
+    border-radius: var(--radio-borde);
+    border-left: 5px solid var(--color-primario);
+    box-shadow: var(--sombra-suave);
+    padding: 32px 36px;
+}
+
+.tarjeta-experiencia__cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.tarjeta-experiencia__puesto {
+    font-family: var(--fuente-titulos);
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+.tarjeta-experiencia__empresa {
+    color: var(--color-texto-claro);
+    font-size: 15px;
+}
+
+.tarjeta-experiencia__fecha {
+    flex-shrink: 0;
+    background-color: rgba(224, 122, 95, 0.1);
+    color: var(--color-primario-oscuro);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.tarjeta-experiencia__lista {
+    list-style: disc;
+    padding-left: 20px;
+    color: var(--color-texto-claro);
+    font-size: 15px;
+}
+
+.tarjeta-experiencia__lista li { margin-bottom: 8px; }
+.tarjeta-experiencia__lista li::marker { color: var(--color-primario); }
+
+
 /* Tecnologías - grid de tarjetas */
 .tecnologias__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
 
 .tarjeta-tech {
     background-color: var(--color-fondo-claro);
     border-radius: var(--radio-borde);
-    padding: 32px 24px;
+    padding: 24px 16px;
     text-align: center;
     box-shadow: var(--sombra-suave);
     transition: var(--transicion);
@@ -265,34 +337,24 @@ ul { list-style: none; }
     box-shadow: var(--sombra-hover);
 }
 
-.tarjeta-tech__icono {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 16px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .tarjeta-tech__img {
-    max-width: 60px;
-    max-height: 60px;
-}
-
-.tarjeta-tech__img--java {
-    transform: scale(1.6);
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 12px auto;
+    object-fit: contain;
 }
 
 .tarjeta-tech__nombre {
     font-family: var(--fuente-titulos);
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     color: var(--color-texto);
 }
 
 .tarjeta-tech__desc {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.4;
     color: var(--color-texto-claro);
 }
 
@@ -407,6 +469,28 @@ ul { list-style: none; }
 }
 
 
+/* encuadre para capturas de escritorio: se ve el menú lateral y el título */
+.tarjeta-proyecto__imagen--arriba-izq { object-position: left top; }
+
+.tarjeta-proyecto__badge--privado {
+    left: auto;
+    right: 16px;
+    background-color: rgba(46, 48, 71, 0.85);
+    border: 1px solid rgba(244, 241, 222, 0.3);
+}
+
+.tarjeta-proyecto__enlace {
+    align-self: flex-start;
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--color-primario-oscuro);
+    border-bottom: 2px solid transparent;
+    transition: var(--transicion);
+}
+.tarjeta-proyecto__enlace:hover { border-bottom-color: var(--color-primario); }
+
+
 /* Contacto - fondo oscuro */
 .contacto {
     background-color: var(--color-hero-fondo);
@@ -431,11 +515,11 @@ ul { list-style: none; }
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radio-borde);
-    padding: 32px 40px;
+    padding: 32px 24px;
     text-align: center;
     transition: var(--transicion);
     flex: 1;
-    min-width: 200px;
+    min-width: 180px;
 }
 
 .contacto__tarjeta:hover {
@@ -445,9 +529,16 @@ ul { list-style: none; }
 }
 
 .contacto__icono {
-    font-size: 32px;
     display: block;
-    margin-bottom: 13px;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 13px auto;
+}
+
+.contacto__icono svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--color-primario);
 }
 
 .contacto__medio {
@@ -484,6 +575,7 @@ ul { list-style: none; }
     }
 
     .tarjeta-proyecto--destacado { grid-template-columns: 1fr; }
+    .tecnologias__grid { grid-template-columns: repeat(3, 1fr); }
     .proyectos__grid { grid-template-columns: 1fr; }
 }
 
@@ -519,6 +611,18 @@ ul { list-style: none; }
         height: 180px;
     }
 
+    html { scroll-padding-top: 100px; }
+
+    .tecnologias__grid { gap: 10px; }
+
+    .tarjeta-tech { padding: 16px 6px; }
+    .tarjeta-tech__img { width: 36px; height: 36px; margin-bottom: 8px; }
+    .tarjeta-tech__nombre { font-size: 15px; }
+    .tarjeta-tech__desc { font-size: 12px; }
+
+    .tarjeta-experiencia { padding: 24px 20px; }
+    .tarjeta-experiencia__cabecera { flex-direction: column; gap: 8px; }
+
     .contacto__contenedor {
         flex-direction: column;
         align-items: center;
@@ -528,4 +632,18 @@ ul { list-style: none; }
         width: 100%;
         max-width: 300px;
     }
+}
+
+
+/* Accesibilidad: foco visible con teclado */
+a:focus-visible {
+    outline: 3px solid var(--color-primario);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Respeta a quien prefiere menos animaciones */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
 }

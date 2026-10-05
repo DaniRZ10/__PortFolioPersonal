@@ -4,8 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Ríos Zea | Junior Web Developer</title>
     <meta name="description"
-        content="Portfolio personal de Daniel Ríos Zea, estudiante de Desarrollo de Aplicaciones Web (DAW). HTML, CSS, Java y más.">
+        content="Portfolio de Daniel Ríos Zea, estudiante de 2º de Desarrollo de Aplicaciones Web (DAW) en Sevilla. Java, Python, PHP/Laravel, React e Inteligencia Artificial aplicada.">
+    <meta name="author" content="Daniel Ríos Zea">
+    <meta name="theme-color" content="#3D405B">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- Vista previa al compartir el enlace (LinkedIn, WhatsApp...) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Daniel Ríos Zea | Junior Web Developer">
+    <meta property="og:description" content="Estudiante de DAW en Sevilla. Java, Python, Laravel, React e IA aplicada.">
+    <meta property="og:image" content="https://danirz10.github.io/__PortFolioPersonal/assets/og-image.png">
+    <meta property="og:url" content="https://danirz10.github.io/__PortFolioPersonal/">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,18 +27,17 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
-    <title>Daniel Ríos Zea | Web Developer</title>
 </head>
 
 <body>
 
     <!-- Navbar fija -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Navegación principal">
         <div class="navbar__contenedor">
-            <a href="#inicio" class="navbar__logo">DRZ<span class="navbar__logo-punto">.</span></a>
+            <a href="#inicio" class="navbar__logo" aria-label="Ir al inicio">DRZ<span class="navbar__logo-punto">.</span></a>
             <ul class="navbar__lista">
-                <li><a href="#inicio" class="navbar__enlace">Inicio</a></li>
                 <li><a href="#sobre-mi" class="navbar__enlace">Sobre mí</a></li>
+                <li><a href="#experiencia" class="navbar__enlace">Experiencia</a></li>
                 <li><a href="#tecnologias" class="navbar__enlace">Tecnologías</a></li>
                 <li><a href="#proyectos" class="navbar__enlace">Proyectos</a></li>
                 <li><a href="#contacto" class="navbar__enlace">Contacto</a></li>
@@ -39,43 +50,69 @@
         <div class="hero__contenido">
             <span class="hero__etiqueta">👋 ¡Hola! Soy</span>
             <h1 class="hero__nombre">Daniel Ríos Zea</h1>
-            <p class="hero__titulo">Web Developer</p>
+            <p class="hero__titulo">Junior Web Developer</p>
             <p class="hero__descripcion">
-                Estudiante de Desarrollo de Aplicaciones Web (DAW) enfocado en el desarrollo
-                backend con <strong>Python y Java</strong>, apasionado por la integración de
-                <strong>Inteligencia Artificial</strong> y el diseño de interfaces modernas.
+                Estudiante de 2º de Desarrollo de Aplicaciones Web (DAW) en Sevilla. Desarrollo
+                backend con <strong>Java y Python</strong> y me apasiona integrar
+                <strong>Inteligencia Artificial</strong> en aplicaciones reales.
             </p>
-            <a href="#proyectos" class="hero__boton">Ver mis proyectos</a>
+            <div class="hero__botones">
+                <a href="#proyectos" class="hero__boton">Ver mis proyectos</a>
+                <a href="assets/CV-DanielRiosZea-EN.pdf" class="hero__boton hero__boton--secundario" download>Descargar CV</a>
+            </div>
         </div>
     </header>
 
+    <main>
     <!-- Sobre mí -->
     <section class="seccion sobre-mi" id="sobre-mi">
         <h2 class="seccion__titulo">Sobre mí</h2>
 
         <div class="sobre-mi__contenido">
             <div class="sobre-mi__imagen-contenedor">
-                <img src="assets/perfil.png" alt="Foto de Daniel Ríos Zea" class="sobre-mi__imagen">
+                <img src="assets/perfil.webp" alt="Foto de Daniel Ríos Zea" class="sobre-mi__imagen" width="560" height="773">
             </div>
 
             <div class="sobre-mi__texto">
                 <p>
-                    Soy Daniel, estudiante de primer año de <strong>DAW</strong> en busca de una
-                    carrera en el mundo del desarrollo web. Me interesa tanto el frontend como el
-                    backend, y disfruto creando proyectos que resuelvan problemas reales.
+                    Soy Daniel, estudiante de segundo curso de <strong>DAW</strong> en ILERNA Sevilla. Antes
+                    pasé por Ingeniería Industrial y por Automatización y Robótica Industrial, una base que me
+                    ha dado una forma muy estructurada de enfrentarme a los problemas.
                 </p>
                 <p>
-                    Actualmente estoy especializado en <strong>Python, Java y desarrollo web</strong>,
-                    enfocándome en la creación de aplicaciones inteligentes mediante la integración
-                    de <strong>Inteligencia Artificial</strong>. Domino el uso de <strong>Git</strong> para el
-                    control de versiones y disfruto resolviendo problemas complejos de forma eficiente.
+                    Trabajo sobre todo con <strong>Java y Python</strong> en el backend, y en este curso con
+                    <strong>PHP/Laravel y React</strong>. Me interesa especialmente la <strong>IA aplicada</strong>:
+                    modelos locales con Ollama, arquitecturas híbridas local/cloud y desarrollo asistido por agentes.
                 </p>
                 <p>
-                    Mi objetivo es seguir formándome, contribuir a proyectos interesantes y, en un
-                    futuro, especializarme en desarrollo full-stack.
+                    Me gusta trabajar con método: <strong>Spec-Driven Development</strong>, GitFlow y tests
+                    automatizados. Mi objetivo es crecer como desarrollador full-stack.
                 </p>
             </div>
         </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="seccion experiencia" id="experiencia">
+        <h2 class="seccion__titulo">Experiencia</h2>
+        <p class="seccion__subtitulo">Donde he aplicado lo que aprendo</p>
+
+        <article class="tarjeta-experiencia">
+            <div class="tarjeta-experiencia__cabecera">
+                <div>
+                    <h3 class="tarjeta-experiencia__puesto">Prácticas de Desarrollo de Software</h3>
+                    <p class="tarjeta-experiencia__empresa">Datalsia · Sevilla · Formación en empresa</p>
+                </div>
+                <span class="tarjeta-experiencia__fecha">Abr 2026 – May 2026</span>
+            </div>
+            <ul class="tarjeta-experiencia__lista">
+                <li>Investigación y redacción de informes técnicos sobre IA aplicada: inferencia de LLM en local,
+                    benchmarking de modelos en hardware limitado y arquitecturas híbridas local/cloud.</li>
+                <li>Auditoría de un código interno con 14 hallazgos técnicos documentados, entre ellos problemas de
+                    concurrencia, pérdida de datos en streaming y un riesgo de exposición de credenciales.</li>
+                <li>Aplicación de Spec-Driven Development con herramientas de IA y presentación de resultados al equipo.</li>
+            </ul>
+        </article>
     </section>
 
     <!-- Tecnologías - grid de tarjetas -->
@@ -85,43 +122,79 @@
 
         <div class="tecnologias__grid">
             <article class="tarjeta-tech">
-                <div class="tarjeta-tech__icono">
-                    <img src="assets/java.png" alt="Logo de Java" class="tarjeta-tech__img tarjeta-tech__img--java">
-                </div>
+                <img src="assets/tech/java.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
                 <h3 class="tarjeta-tech__nombre">Java</h3>
-                <p class="tarjeta-tech__desc">Programación orientada a objetos</p>
+                <p class="tarjeta-tech__desc">POO y backend</p>
             </article>
-
             <article class="tarjeta-tech">
-                <div class="tarjeta-tech__icono">
-                    <img src="assets/python.png" alt="Logo de Python" class="tarjeta-tech__img">
-                </div>
+                <img src="assets/tech/spring.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">Spring Boot</h3>
+                <p class="tarjeta-tech__desc">APIs REST</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/junit.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">JUnit</h3>
+                <p class="tarjeta-tech__desc">Testing</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/maven.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">Maven</h3>
+                <p class="tarjeta-tech__desc">Build y dependencias</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/python.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
                 <h3 class="tarjeta-tech__nombre">Python</h3>
-                <p class="tarjeta-tech__desc">Automatización y Ciencia de Datos</p>
+                <p class="tarjeta-tech__desc">Backend e IA</p>
             </article>
-
             <article class="tarjeta-tech">
-                <div class="tarjeta-tech__icono">
-                    <img src="assets/html.png" alt="Logo de HTML5" class="tarjeta-tech__img">
-                </div>
+                <img src="assets/tech/javascript.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">JavaScript</h3>
+                <p class="tarjeta-tech__desc">Interactividad web</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/react.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">React</h3>
+                <p class="tarjeta-tech__desc">Interfaces SPA</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/php.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">PHP</h3>
+                <p class="tarjeta-tech__desc">Desarrollo en servidor</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/laravel.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">Laravel</h3>
+                <p class="tarjeta-tech__desc">Framework MVC</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/mysql.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">MySQL</h3>
+                <p class="tarjeta-tech__desc">Bases de datos</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/html5.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
                 <h3 class="tarjeta-tech__nombre">HTML5</h3>
-                <p class="tarjeta-tech__desc">Estructura y semántica web</p>
+                <p class="tarjeta-tech__desc">Estructura semántica</p>
             </article>
-
             <article class="tarjeta-tech">
-                <div class="tarjeta-tech__icono">
-                    <img src="assets/css.png" alt="Logo de CSS3" class="tarjeta-tech__img">
-                </div>
+                <img src="assets/tech/css3.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
                 <h3 class="tarjeta-tech__nombre">CSS3</h3>
-                <p class="tarjeta-tech__desc">Diseño y maquetación</p>
+                <p class="tarjeta-tech__desc">Maquetación responsive</p>
             </article>
-
             <article class="tarjeta-tech">
-                <div class="tarjeta-tech__icono">
-                    <img src="assets/git.png" alt="Logo de Git" class="tarjeta-tech__img">
-                </div>
+                <img src="assets/tech/git.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
                 <h3 class="tarjeta-tech__nombre">Git</h3>
                 <p class="tarjeta-tech__desc">Control de versiones</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/github.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">GitHub</h3>
+                <p class="tarjeta-tech__desc">GitFlow y colaboración</p>
+            </article>
+            <article class="tarjeta-tech">
+                <img src="assets/tech/ollama.svg" alt="" class="tarjeta-tech__img" width="44" height="44" loading="lazy">
+                <h3 class="tarjeta-tech__nombre">Ollama</h3>
+                <p class="tarjeta-tech__desc">IA local</p>
             </article>
         </div>
     </section>
@@ -136,15 +209,14 @@
             <!-- Proyecto destacado: ELDAP -->
             <article class="tarjeta-proyecto tarjeta-proyecto--destacado">
                 <div class="tarjeta-proyecto__imagen-contenedor">
-                    <img src="assets/eldap.jpg" alt="Captura del videojuego ELDAP" class="tarjeta-proyecto__imagen">
+                    <img src="assets/eldap.webp" alt="Captura del videojuego ELDAP" class="tarjeta-proyecto__imagen" width="1280" height="720" loading="lazy">
                     <span class="tarjeta-proyecto__badge">Destacado</span>
                 </div>
                 <div class="tarjeta-proyecto__info">
                     <h3 class="tarjeta-proyecto__titulo">ELDAP</h3>
                     <p class="tarjeta-proyecto__descripcion">
-                        Videojuego desarrollado en equipo como proyecto de clase.
-                        Ganador del concurso interno del aula. Programado en Java con
-                        mecánicas de exploración y combate por turnos.
+                        Videojuego desarrollado en equipo como proyecto de clase y ganador del concurso
+                        interno del aula. Programado en Java, con mecánicas de exploración y combate por turnos.
                     </p>
                     <div class="tarjeta-proyecto__tags">
                         <span class="tag">Java</span>
@@ -154,22 +226,72 @@
                 </div>
             </article>
 
-            <!-- Ge-mini Project -->
+            <!-- Ge-mini -->
             <article class="tarjeta-proyecto">
                 <div class="tarjeta-proyecto__imagen-contenedor">
-                    <img src="assets/ge-mini.png" alt="Captura del proyecto Ge-mini" class="tarjeta-proyecto__imagen">
+                    <img src="assets/ge-mini.webp" alt="Captura de la interfaz de chat de Ge-mini" class="tarjeta-proyecto__imagen" width="1280" height="719" loading="lazy">
                 </div>
                 <div class="tarjeta-proyecto__info">
                     <h3 class="tarjeta-proyecto__titulo">Ge-mini</h3>
                     <p class="tarjeta-proyecto__descripcion">
-                        Proyecto personal de una mini IA, un clon de ChatGPT personal que usa
-                        las APIs de Gemini y Groq para procesamiento de lenguaje natural.
+                        Chat de IA multimodelo: cambia entre Gemini, Claude, Llama (Groq) y modelos locales
+                        con Ollama sin perder el contexto. Backend en FastAPI con arquitectura limpia, respuestas
+                        en streaming, persistencia con SQLAlchemy y Alembic, y 65 tests con pytest.
                     </p>
                     <div class="tarjeta-proyecto__tags">
                         <span class="tag">Python</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Gemini SDK</span>
                         <span class="tag">FastAPI</span>
+                        <span class="tag">SQLAlchemy</span>
+                        <span class="tag">Ollama</span>
+                        <span class="tag">pytest</span>
+                    </div>
+                    <a href="https://github.com/DaniRZ10/Ge-mini" class="tarjeta-proyecto__enlace" target="_blank" rel="noopener noreferrer">Ver código →</a>
+                </div>
+            </article>
+
+            <!-- NOBA (repositorio privado) -->
+            <article class="tarjeta-proyecto">
+                <div class="tarjeta-proyecto__imagen-contenedor">
+                    <img src="assets/noba.webp" alt="Pantalla de analítica de la app NOBA" class="tarjeta-proyecto__imagen" width="1000" height="400" loading="lazy">
+                    <span class="tarjeta-proyecto__badge tarjeta-proyecto__badge--privado">🔒 Privado</span>
+                </div>
+                <div class="tarjeta-proyecto__info">
+                    <h3 class="tarjeta-proyecto__titulo">NOBA</h3>
+                    <p class="tarjeta-proyecto__descripcion">
+                        App móvil de apoyo nutricional para pacientes oncológicos, con recomendaciones basadas en
+                        sus valores analíticos y en la evidencia clínica. Diseñé un flujo con triple filtro de
+                        seguridad (plausibilidad, reglas clínicas y derivación) y un sistema de diseño con
+                        semáforo y niveles de evidencia. Prototipo v0.1 en Figma.
+                    </p>
+                    <div class="tarjeta-proyecto__tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">UX/UI</span>
+                        <span class="tag">HTML/CSS/JS</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ACREDDO (repositorio privado) -->
+            <article class="tarjeta-proyecto">
+                <div class="tarjeta-proyecto__imagen-contenedor">
+                    <img src="assets/acreddo.webp" alt="Panel de control de ACREDDO" class="tarjeta-proyecto__imagen tarjeta-proyecto__imagen--arriba-izq" width="1600" height="694" loading="lazy">
+                    <span class="tarjeta-proyecto__badge tarjeta-proyecto__badge--privado">🔒 Privado</span>
+                </div>
+                <div class="tarjeta-proyecto__info">
+                    <h3 class="tarjeta-proyecto__titulo">ACREDDO</h3>
+                    <p class="tarjeta-proyecto__descripcion">
+                        Plataforma web de acreditación y control de accesos para eventos, con gestión multi-cliente
+                        de proveedores y trabajadores. Sustituye el control manual de quién entra en cada zona por
+                        permisos por rol y trazabilidad. Modelo multi-tenant con Row Level Security revisado en
+                        cinco rondas de seguridad.
+                    </p>
+                    <div class="tarjeta-proyecto__tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Cloudflare Workers</span>
                     </div>
                 </div>
             </article>
@@ -177,19 +299,20 @@
             <!-- Portfolio -->
             <article class="tarjeta-proyecto">
                 <div class="tarjeta-proyecto__imagen-contenedor">
-                    <img src="assets/proyecto-portfolio.png" alt="Captura del portfolio web"
-                        class="tarjeta-proyecto__imagen">
+                    <img src="assets/proyecto-portfolio.webp" alt="Captura de este portfolio" class="tarjeta-proyecto__imagen" width="1280" height="720" loading="lazy">
                 </div>
                 <div class="tarjeta-proyecto__info">
                     <h3 class="tarjeta-proyecto__titulo">Portfolio Personal</h3>
                     <p class="tarjeta-proyecto__descripcion">
-                        Esta misma web que estás viendo. Diseñada con HTML5 y CSS3 puro,
-                        usando Flexbox y CSS Grid para la maquetación.
+                        Esta misma web. HTML5 semántico y CSS3 puro, sin frameworks ni JavaScript: Flexbox y
+                        CSS Grid para la maquetación, diseño responsive para móvil y tablet, e imágenes optimizadas en WebP.
                     </p>
                     <div class="tarjeta-proyecto__tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Responsive</span>
                     </div>
+                    <a href="https://github.com/DaniRZ10/__PortFolioPersonal" class="tarjeta-proyecto__enlace" target="_blank" rel="noopener noreferrer">Ver código →</a>
                 </div>
             </article>
 
@@ -199,34 +322,41 @@
     <!-- Contacto -->
     <section class="seccion contacto" id="contacto">
         <h2 class="seccion__titulo">Contacto</h2>
-        <p class="seccion__subtitulo">¿Quieres ponerte en contacto conmigo?</p>
+        <p class="seccion__subtitulo">¿Hablamos? Estoy abierto a nuevas oportunidades</p>
 
         <div class="contacto__contenedor">
             <a href="mailto:drioszea@gmail.com" class="contacto__tarjeta">
-                <span class="contacto__icono">✉️</span>
+                <span class="contacto__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg></span>
                 <h3 class="contacto__medio">Email</h3>
                 <p class="contacto__dato">drioszea@gmail.com</p>
             </a>
 
-            <a href="https://github.com/danirz10" target="_blank" rel="noopener noreferrer" class="contacto__tarjeta">
-                <span class="contacto__icono">💻</span>
+            <a href="https://github.com/DaniRZ10" target="_blank" rel="noopener noreferrer" class="contacto__tarjeta">
+                <span class="contacto__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></span>
                 <h3 class="contacto__medio">GitHub</h3>
-                <p class="contacto__dato">github.com/danirz10</p>
+                <p class="contacto__dato">github.com/DaniRZ10</p>
             </a>
 
-            <a href="https://es.linkedin.com/in/danirz/" target="_blank" rel="noopener noreferrer"
-                class="contacto__tarjeta">
-                <span class="contacto__icono">🔗</span>
+            <a href="https://www.linkedin.com/in/danirz/" target="_blank" rel="noopener noreferrer" class="contacto__tarjeta">
+                <span class="contacto__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></span>
                 <h3 class="contacto__medio">LinkedIn</h3>
-                <p class="contacto__dato">linkedin.com/in/danirz/</p>
+                <p class="contacto__dato">linkedin.com/in/danirz</p>
+            </a>
+
+            <a href="assets/CV-DanielRiosZea-EN.pdf" class="contacto__tarjeta" download>
+                <span class="contacto__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm-1 1.5L18.5 9H13zM12 18l-4-4h2.5v-3h3v3H16z"/></svg></span>
+                <h3 class="contacto__medio">CV</h3>
+                <p class="contacto__dato">Descargar PDF</p>
             </a>
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <p class="footer__texto">
-            &copy; 2026 Daniel Ríos Zea · Proyecto realizado para el módulo de Lenguaje de Marcas (DAW)
+            &copy; 2026 Daniel Ríos Zea · Diseñado y desarrollado con HTML5 y CSS3
         </p>
     </footer>
 
